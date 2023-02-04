@@ -1,0 +1,13 @@
+### List all Tasks
+Get http://localhost:3000/tasks
+
+### Create a new Task
+POST http://localhost:3000/tasks
+content-type: application/json
+
+{
+    "task": "Learn NestJS"
+}
+
+###Get a Task
+Get http://localhost:3000/tasks/133

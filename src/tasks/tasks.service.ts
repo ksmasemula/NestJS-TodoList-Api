@@ -1,14 +1,9 @@
+import { Injectable } from "@nestjs/common";
 import { TasksRepository } from "./tasks.repository";
 
+@Injectable()
 export class TasksService {
-
-    tasksRepo: TasksRepository;
-
-    constructor(){
-        // Dont Do thisn on Real apps use Dependency Injection
-        this.tasksRepo = new TasksRepository();
-    }
-
+    constructor( public tasksRepo: TasksRepository){}
 
     findOne(id: string){       
         return this.tasksRepo.findOne(id);

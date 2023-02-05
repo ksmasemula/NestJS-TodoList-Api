@@ -3,7 +3,7 @@ import { TasksRepository } from "./tasks.repository";
 
 @Injectable()
 export class TasksService {
-    constructor( public tasksRepo: TasksRepository){}
+    constructor( private tasksRepo: TasksRepository){}
 
     findOne(id: string){       
         return this.tasksRepo.findOne(id);

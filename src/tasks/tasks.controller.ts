@@ -4,7 +4,7 @@ import { TasksService } from './tasks.service';
 
 @Controller('tasks')
 export class TasksController {
-    constructor(public tasksService: TasksService){}
+    constructor(private tasksService: TasksService){}
 
     @Get()
     listTasks() { 
